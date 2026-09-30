@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Organizador Financeiro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Organizador Financeiro</h1>
+      <p>Saldo Atual: <span id="saldo-total">R$ 0,00</span></p>
+    </header>
+
+    <main>
+      <form id="form-transacao">
+        <input type="text" id="descricao" placeholder="Ex: Salário, Aluguel" required>
+        <input type="number" id="valor" placeholder="Ex: 1500.00" step="0.01" required>
+        <select id="tipo">
+          <option value="receita">Receita (+)</option>
+          <option value="despesa">Despesa (-)</option>
+        </select>
+        <button type="submit">Adicionar</button>
+      </form>
+
+      <table id="tabela-transacoes">
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="lista-corpo">
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
